@@ -1,0 +1,97 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Badge from '../components/Badge.astro';
+import SocialButtons from '../components/SocialButtons.astro';
+import LinkedinIcon from '../icons/linkedinIcon.astro';
+import GithubIcon from '../icons/githubIcon.astro';
+import MailIcon from '../icons/mailIcon.astro';
+import Experience from '../components/Experience.astro';
+import BagIcon from '../icons/bagIcon.astro';
+import CodeIcon from '../icons/codeIcon.astro';
+import Projects from '../components/Projects.astro';
+import AboutMe from '../components/AboutMe.astro';
+import AboutMeIcon from '../icons/aboutMeIcon.astro';
+
+---
+
+<Layout 
+	title="Portafolio de Alejandro Perez - Estudiante de Ingeniería en Sistemas y Técnico en Diseño Gráfico"
+	description="Desarrollador web en formación, apasionado por el frontend y la creación de interfaces modernas e intuitivas"
+>
+	<main id="inicio" class="w-full flex justify-center px-4">
+
+		<section class="w-[340px] sm:w-[520px] md:w-[720px] py-20 sm:py-32 text-wrap">
+			<div class="flex mb-4">
+				<img class="rounded-full size-28 sm:size-32 border-" src="img/foto.webp" alt="Alejandro Perez photo">
+				<a class="my-auto ms-4"
+						href="https://www.linkedin.com/in/alejandro-perez-jaramillo-186137318/"
+						target="_blank"
+						rel="noopener"
+					>
+						<Badge>Disponible para trabajar</Badge>
+				</a>
+			</div>
+
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 mb-5">
+				Hola, soy Alejandro Perez
+			</h1>
+			<h2 class="text-2xl text-white/90 mb-5">
+				Estudiante de <span class="text-yellow-100">Ingeniería en Sistemas y Técnico en Diseño Gráfico.</span> De Medellín Antioquia, con enfoque en el <span class="text-red-200">desarrollo frontend</span>. 
+			</h2>
+
+			<nav class="flex gap-4 mb-40 flex-wrap">
+				<SocialButtons 
+					href="https://www.linkedin.com/in/alejandro-perez-jaramillo-186137318/">
+					<LinkedinIcon class="size-6" fill="white"/>
+					LinkedIn
+				</SocialButtons>
+
+				<SocialButtons 
+					href="https://github.com/AlejoPerez10">
+					<GithubIcon class="size-7"/>
+					GitHub
+				</SocialButtons>
+
+				<SocialButtons 
+					href="#"
+					target="_self"
+					onclick="copyEmail()"
+				>
+					<MailIcon class="size-8"/>
+					alejo.perezja@gmail.com
+				</SocialButtons>
+			</nav>
+
+			<h1 id="experiencia" class="flex items-center gap-x-3 text-4xl font-semibold text-white mb-5">
+				<BagIcon class="size-9"/>
+				Experiencia
+			</h1>
+			<Experience/>
+
+			<h1 id="proyectos" class="flex items-center gap-x-3 text-4xl font-semibold text-white mb-5 mt-40">
+				<CodeIcon class="size-10"/>
+				Proyectos
+			</h1>
+			<Projects/>
+
+			<h1 id="sobreMi" class="flex items-center gap-x-3 text-4xl font-semibold text-white mb-5 mt-40">
+				<AboutMeIcon class="size-10"/>
+				Sobre Mí
+			</h1>
+			<AboutMe/>
+
+		</section>
+	</main>
+</Layout>
+
+<script type="text/typescript" is:inline>
+    async function copyEmail() {
+        const email = 'alejo.perezja@gamil.com';
+        try {
+            await navigator.clipboard.writeText(email);
+            alert('¡ Correo copiado !');
+        } catch (err) {
+            console.error('Error al copiar el correo:', err);
+        }
+    }
+</script>

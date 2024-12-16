@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: 'Febrero 2, 2019 - Junio 15, 2019',
+        title: 'Practicante de Diseño Gráfico',
+        description: 'Desarrollé materiales visuales para promover la inclusión y la concientización sobre la discapacidad. Contribuí a la creación de campañas de comunicación y aseguré que los diseños fueran accesibles y atractivos para público diverso.',
+        contact: 'direccion@aociacionamigos.org'
+    },
+    {
+        date: 'Marzo 1, 2022 - Junio 25, 2022',
+        title: 'Proyecto para Programación Orientada a Objetos (POO)',
+        description: 'Diseñé y desarrollé una aplicación web enfocada a barberías, para facilitar la forma en que se agendan las citas sin tener que acudir personalmente ni tener contacto con el barbero.',
+        contact: 'ucatolicaluisamigo@amigo.edu.co'
+    },
+    {
+        date: 'Agosto 28, 2024 - Noviembre 20, 2024',
+        title: 'Proyecto para Programación Web',
+        description: 'Diseñé y desarrollé un sitio web para la creación de viajes con amigos, donde se dividirá cada gasto de cada viaje para no tener problemas de dinero y tener todos los gastos del viaje guardados.',
+        contact: 'ucatolicaluisamigo@amigo.edu.co'
+    }
+];
+---
+
+
+<ol class="relative border-s border-gray-200 ms-[17px] z-[-2]">        
+
+    {
+        EXPERIENCE.map(experience=> (
+            <li class="mb-10 ms-8">
+                <ExperienceItem {...experience}/>
+            </li>
+        ))
+    }
+
+</ol>

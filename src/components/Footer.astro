@@ -1,0 +1,73 @@
+---
+import GithubIcon from "../icons/githubIcon.astro";
+import LinkedinIcon from "../icons/linkedinIcon.astro";
+import MailIcon from "../icons/mailIcon.astro";
+import WppIcon from "../icons/wppIcon.astro";
+
+---
+
+<footer id="footerId" class="w-full bg-transparent rounded-lg shadow m-4">
+    
+    <div class="w-full mx-auto max-w-screen-xl p-4 flex flex-col-reverse items-center md:flex-row sm:justify-between">
+        <span class="text-2xl text-gray-400">
+            © 2024
+            <a href="#" class="hover:underline hover:text-gray-300 duration-500">
+                Alejandro Perez.
+            </a>
+        </span>
+        <ul class="flex justify-center items-center gap-x-3">
+            <li>
+                <a
+                    class="hover:underline me-4"
+                    href="https://www.linkedin.com/in/alejandro-perez-jaramillo-186137318/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <LinkedinIcon class="size-8 hover:fill-gray-300 duration-700" fill="gray"/>
+                </a>
+            </li>
+            <li>
+                <a
+                    class="hover:underline me-4"
+                    href="https://github.com/AlejoPerez10"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <GithubIcon class="size-8 hover:fill-gray-300 duration-700" fill="gray"/>
+                </a>
+            </li>
+            <li>
+                <a
+                    class="hover:underline me-4"
+                    href="#footerId"
+                    onclick="copyEmail()"
+                >
+                    <MailIcon class="size-[45px] hover:fill-gray-300 duration-700" fill="gray"/>
+                </a>
+            </li>
+            <li>
+                <a
+                class="hover:underline me-4"
+                href="https://wa.me/573017619595"
+                target="_blank"
+                rel="noopener noreferrer"
+                >
+                    <WppIcon class="size-[40px] hover:stroke-gray-300 duration-700" stroke="gray"/>
+                </a>
+            </li>
+        </ul>
+    </div>
+</footer>
+
+<script type="text/javascript" is:inline>
+    async function copyEmail() {
+        const email = 'alejo.perezja@gamil.com';
+        try {
+            await navigator.clipboard.writeText(email);
+            alert('¡ Correo copiado !');
+        } catch (err) {
+            console.error('Error al copiar el correo:', err);
+        }
+    }
+</script>
+

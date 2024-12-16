@@ -1,0 +1,30 @@
+---
+interface Props {
+    title: string,
+    description: string,
+    date: string,
+    contact: string,
+}
+const { title, description, date, contact } = Astro.props;
+---
+
+<div class="relative z-[-2]">
+    <span class="absolute flex items-center justify-center size-1 bg-yellow-300 rounded-full start-[-34.1px] ring-4 ring-yellow-300 top-3">
+    </span>
+
+    <h3 class="flex items-center mb-2 text-2xl font-bold text-yellow-100">
+        {title}
+    </h3>
+    
+    <time class="block mb-3 ms-7 text-lg font-normal leading-none text-red-200">
+        {date}
+    </time>
+
+    <p class="mb-3 text-xl font-normal text-white">
+        {description}
+    </p>
+
+    <p class="block text-lg ms-7 font-normal leading-none text-white/90">
+        <span class="text-red-200">Contacto:</span> {contact}
+    </p>
+</div>

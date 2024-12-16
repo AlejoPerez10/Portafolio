@@ -1,0 +1,61 @@
+---
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+interface Props {
+	title: string
+	description: string
+}
+
+const { description, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description}/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+
+	<body>
+		<div class="absolute inset-0 -z-10">
+			<div class="relative h-full w-full bg-[#111111]">
+				<div class="fixed bg-[#111111] bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]">
+				</div>
+				<div class="absolute left-0 right-0 top-[-70%] sm:top-[-60%] md:top-[-30%] h-[1000px] w-full rounded-full 
+					bg-[radial-gradient(circle_450px_at_50%_450px,#fbfbfb36,transparent)]
+					sm:bg-[radial-gradient(circle_350px_at_50%_300px,#fbfbfb36,transparent)]
+					md:bg-[radial-gradient(circle_500px_at_50%_400px,#fbfbfb36,transparent)]">
+				</div>
+			</div>
+		</div>
+		<Header/>
+		<slot />
+		<Footer/>
+	</body>
+</html>
+
+<style>
+	:root {
+		
+	}
+
+	html {
+		font-family: nunito, system-ui, sans-serif;
+		height: 100vh;
+		scroll-padding-top:80px;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		background: #111111;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100vh;
+	}
+</style>
