@@ -48,8 +48,8 @@ const PROJECTS = [
         image: 'img/tripBalancePic.webp',
         title: 'TripBalance',
         description: 'Diseñado completamente por mí, fue un proyecto con fines educativos el cual desarrolle para la clase Programación para la Web.',
-        link: 'Soon...',
-        github: 'Soon...',
+        link: 'https://tripbalance.netlify.app',
+        github: 'https://github.com/AlejoPerez10/TripBalance',
         tags: [TAGS.react, TAGS.html, TAGS.javascript, TAGS.bootstrap]
     },
     {
@@ -96,13 +96,13 @@ const PROJECTS = [
                 </p>
 
                 <div class="w-80 flex gap-4">
-                    <p class="rounded-xl border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:bg-white/30 transition text-white hover:cursor-pointer">
-                        {link} <LinkIcon/>
-                    </p>
+                    <a href={link} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:bg-white/30 transition text-white hover:cursor-pointer">
+                        Link <LinkIcon/>
+                    </a>
 
-                    <p class="rounded-xl border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:bg-white/30 transition text-white hover:cursor-pointer">
-                        {github} <GithubIcon class="size-6"/>
-                    </p>
+                    <a href={github} target="_blank" rel="noopener noreferrer" class="rounded-xl border border-white/10 flex justify-center items-center gap-x-2 py-2 px-4 bg-white/5 hover:bg-white/30 transition text-white hover:cursor-pointer">
+                        GitHub <GithubIcon class="size-6"/>
+                    </a>
                 </div>
 
             </section>

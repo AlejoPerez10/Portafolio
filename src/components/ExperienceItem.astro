@@ -8,7 +8,7 @@ interface Props {
 const { title, description, date, contact } = Astro.props;
 ---
 
-<div class="relative z-[-2]">
+<section class="relative z-[-2] text-wrap">
     <span class="absolute flex items-center justify-center size-1 bg-yellow-300 rounded-full start-[-34.1px] ring-4 ring-yellow-300 top-3">
     </span>
 
@@ -27,4 +27,4 @@ const { title, description, date, contact } = Astro.props;
     <p class="block text-lg ms-7 font-normal leading-none text-white/90">
         <span class="text-red-200">Contacto:</span> {contact}
     </p>
-</div>
+</section>
