@@ -24,7 +24,8 @@ const { title, description, date, contact } = Astro.props;
         {description}
     </p>
 
-    <p class="block text-lg ms-7 font-normal leading-none text-white/90">
-        <span class="text-red-200">Contacto:</span> {contact}
-    </p>
+    <div class="flex flex-col md:flex-row ms-0 md:ms-7 text-lg font-normal leading-none text-white/90 text-wrap">
+        <p class="text-red-200 ms-7">Contacto: </p>
+        <h4 class="text-white opacity-80 md:ms-2">{contact}</h4>
+    </div>
 </section>

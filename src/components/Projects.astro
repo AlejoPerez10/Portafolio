@@ -6,8 +6,8 @@ import MysqlIcon from '../icons/mysqlIcon.astro';
 import ReactIcon from '../icons/reactIcon.astro';
 import JavascriptIcon from '../icons/javascriptIcon.astro';
 import LinkIcon from '../icons/linkIcon.astro';
-import LinkedinIcon from '../icons/linkedinIcon.astro';
 import GithubIcon from '../icons/githubIcon.astro';
+import TailwindIcon from '../icons/tailwindIcon.astro'
 
 const TAGS = {
     html: {
@@ -39,6 +39,11 @@ const TAGS = {
         name: 'JavaScript',
         class: 'flex items-center justify-center bg-[#dbc854] text-black font-semibold text-sm gap-1 rounded-full border-2 border-yellow-100 px-2',
         icon: JavascriptIcon
+    },
+    tailwind: {
+        name: 'Tailwind',
+        class: 'flex items-center justify-center bg-[#0A2A35] text-white font-semibold text-sm gap-1 rounded-full border-2 border-blue-800 px-2',
+        icon: TailwindIcon
     }
 }
 
@@ -47,18 +52,18 @@ const PROJECTS = [
     {
         image: 'img/tripBalancePic.webp',
         title: 'TripBalance',
-        description: 'Diseñado completamente por mí, fue un proyecto con fines educativos el cual desarrolle para la clase Programación para la Web.',
+        description: 'Es una aplicación web con el fin de equilibrar los gastos de cualquier viaje colaborativo con invitados, es un proyecto hecho para la clase Programación Para la Web, diseñado por mí.',
         link: 'https://tripbalance.netlify.app',
         github: 'https://github.com/AlejoPerez10/TripBalance',
         tags: [TAGS.react, TAGS.html, TAGS.javascript, TAGS.bootstrap]
     },
     {
-        image: 'img/freeCodeBarberPic.webp',
-        title: 'Free Code Barber',
-        description: 'Este proyecto fue diseñado entre otra persona y yo, fue desarrollado completamente por mí, con fines educativos el cual desarrolle para la Bases de Datos.',
-        link: 'Soon...',
-        github: 'Soon...',
-        tags: [TAGS.java, TAGS.mysql]
+        image: 'img/encantoRosaPic.webp',
+        title: 'Encanto Rosa',
+        description: 'Una tienda en línea de maquillaje. El diseño visual fue completamente realizado por mí en Figma, la misión del proyecto fue apoyar el emprendimiento de mi familia, mientras mejoraba mis conocimientos sobre React y su sistema de hooks, elevando mis habilidades como desarrollador.',
+        link: 'https://encantorosa.vercel.app/',
+        github: 'https://github.com/AlejoPerez10/Encanto-Rosa.git',
+        tags: [TAGS.react, TAGS.html, TAGS.javascript, TAGS.tailwind]
     }
 ]
 
@@ -66,12 +71,12 @@ const PROJECTS = [
 
 {
     PROJECTS.map(({ image, title, tags, description, link, github }) => (
-        <article class="flex flex-col-reverse md:flex-row gap-7 mb-16">
+        <article class="flex flex-col-reverse md:flex-row-reverse gap-7 mb-16">
 
-            <figure class="w-[360px] sm:w-[520px] md:w-[360px]">
-                <img class="rounded shadow-2xl shadow-white/10" 
+            <figure class="md:flex mx-auto min-w-[300px] md:w-[350px] hover:scale-110 transition-all duration-500">
+                <img class="rounded-lg my-auto shadow-2xl shadow-white/10" 
                     src={image} 
-                    alt=`Cara del proyecto. ${image}`
+                    alt={`Cara del proyecto. ${image}`}
                 >
             </figure>
 
